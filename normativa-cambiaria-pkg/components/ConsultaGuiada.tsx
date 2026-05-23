@@ -11,6 +11,7 @@ interface Turno {
 interface RespuestaMotor {
   accion: "preguntar" | "concluir";
   mensaje: string;
+  opciones?: string[];
   inhabilitantes_chequeados?: string[];
   progreso?: string;
 }
@@ -26,6 +27,7 @@ export function ConsultaGuiada() {
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState("");
   const [progreso, setProgreso] = useState("");
+  const [opciones, setOpciones] = useState<string[]>([]);
   const [concluido, setConcluido] = useState(false);
   const finRef = useRef<HTMLDivElement>(null);
 
@@ -33,13 +35,14 @@ export function ConsultaGuiada() {
     finRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [turnos, cargando]);
 
-  async function enviar() {
-    const texto = input.trim();
+  async function enviar(textoBoton?: string) {
+    const texto = (textoBoton ?? input).trim();
     if (texto.length < 1 || cargando || concluido) return;
 
     const nuevos: Turno[] = [...turnos, { role: "user", content: texto }];
     setTurnos(nuevos);
     setInput("");
+    setOpciones([]); // limpiar botones al responder
     setCargando(true);
     setError("");
 
@@ -55,6 +58,7 @@ export function ConsultaGuiada() {
       } else {
         setTurnos([...nuevos, { role: "assistant", content: data.mensaje }]);
         setProgreso(data.progreso || "");
+        setOpciones(Array.isArray(data.opciones) ? data.opciones : []);
         if (data.accion === "concluir") setConcluido(true);
       }
     } catch {
@@ -69,6 +73,7 @@ export function ConsultaGuiada() {
     setInput("");
     setError("");
     setProgreso("");
+    setOpciones([]);
     setConcluido(false);
   }
 
@@ -163,6 +168,46 @@ export function ConsultaGuiada() {
         </div>
       )}
 
+      {/* Botones de opciones (cuando el motor las ofrece) */}
+      {!concluido && !cargando && opciones.length > 0 && (
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 8,
+            marginBottom: 16,
+          }}
+        >
+          {opciones.map((op) => (
+            <button
+              key={op}
+              onClick={() => enviar(op)}
+              style={{
+                background: "var(--paper)",
+                border: "1.5px solid var(--accent)",
+                borderRadius: 20,
+                padding: "9px 18px",
+                fontFamily: "Newsreader, serif",
+                fontSize: 15.5,
+                color: "var(--accent)",
+                cursor: "pointer",
+                transition: "all 0.15s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--paper)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--paper)";
+                e.currentTarget.style.color = "var(--accent)";
+              }}
+            >
+              {op}
+            </button>
+          ))}
+        </div>
+      )}
+
       {/* Input o botón de reinicio */}
       {concluido ? (
         <button
@@ -193,7 +238,11 @@ export function ConsultaGuiada() {
                 enviar();
               }
             }}
-            placeholder="Tu respuesta…"
+            placeholder={
+              opciones.length > 0
+                ? "Tocá una opción o escribí tu respuesta…"
+                : "Tu respuesta…"
+            }
             disabled={cargando}
             style={{
               flex: 1,
@@ -208,7 +257,7 @@ export function ConsultaGuiada() {
             }}
           />
           <button
-            onClick={enviar}
+            onClick={() => enviar()}
             disabled={cargando || input.trim().length < 1}
             className="mono"
             style={{
