@@ -75,10 +75,14 @@ export async function POST(req: NextRequest) {
       parsed = {
         accion: "preguntar",
         mensaje: textoCrudo,
+        opciones: [],
         inhabilitantes_chequeados: [],
         progreso: "En curso",
       };
     }
+
+    // Garantizar que opciones siempre exista como array.
+    if (!Array.isArray(parsed.opciones)) parsed.opciones = [];
 
     return NextResponse.json(parsed);
   } catch (err) {
