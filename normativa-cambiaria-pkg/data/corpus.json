@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "descripcion": "Corpus semilla de normativa cambiaria argentina. Cada fragmento es citable de forma independiente. NO es asesoramiento. Refleja el regimen vigente tras la reforma de abril 2025.",
-    "ultima_actualizacion_corpus": "2025-09-19",
+    "descripcion": "Corpus de normativa cambiaria argentina. Refleja el regimen vigente con la restriccion cruzada reinstaurada (A 8336, sept 2025) y sus excepciones (A 8361, dic 2025). NO es asesoramiento.",
+    "ultima_actualizacion_corpus": "2026-05-23",
     "advertencia": "Las normas cambiarias argentinas cambian con frecuencia. Verificar SIEMPRE contra la fuente oficial antes de operar. La fuente primaria es el Texto Ordenado de Exterior y Cambios del BCRA."
   },
   "fragmentos": [
@@ -14,7 +14,13 @@
       "comunicacion_origen": "A 6844 y modif.",
       "estado": "vigente",
       "vigencia_desde": "2019-12-05",
-      "tags": ["principios generales", "tipo de cambio", "boleto", "regimen penal cambiario", "acceso al mercado"],
+      "tags": [
+        "principios generales",
+        "tipo de cambio",
+        "boleto",
+        "regimen penal cambiario",
+        "acceso al mercado"
+      ],
       "texto": "Las entidades pueden dar acceso al mercado de cambios a personas humanas o juridicas cuando verifiquen el cumplimiento de las disposiciones generales y las especificas del concepto pertinente. La entidad debe contar con elementos que permitan constatar el caracter genuino de la operacion y su correcto encuadramiento en el concepto declarado. Las operaciones de cambio se realizan al tipo de cambio libremente pactado entre las partes. Por cada operacion la entidad debe confeccionar un boleto de compra y/o venta. Los incumplimientos a esta normativa estan alcanzados por la Ley del Regimen Penal Cambiario.",
       "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
     },
@@ -24,11 +30,23 @@
       "cuerpo": "Texto Ordenado Exterior y Cambios",
       "seccion": "Seccion 3 - Egresos. Formacion de activos externos de personas humanas",
       "punto": "3.8",
-      "comunicacion_origen": "A 8226 (reforma abril 2025) y modif.",
+      "comunicacion_origen": "A 8226 (14/04/2025), modif. por A 8332, A 8336 (26/09/2025) y A 8361",
       "estado": "vigente",
       "vigencia_desde": "2025-04-14",
-      "tags": ["atesoramiento", "persona humana", "formacion de activos externos", "compra de dolares", "ahorro", "FAE", "dolar ahorro"],
-      "texto": "Desde el 14 de abril de 2025, las personas humanas residentes pueden acceder al mercado de cambios para la formacion de activos externos (atesoramiento, ahorro o sin destino especifico) SIN limite de monto cuando la operacion se realiza mediante debito en cuenta en una entidad financiera local (depositos o transferencia, no efectivo). La compra de billetes en efectivo esta limitada a USD 100 mensuales en el conjunto de entidades. El cliente debe poseer ingresos y/o activos consistentes con la operacion. Las personas humanas pueden operar simultaneamente en el mercado de cambios y en el mercado de titulos valores (MEP / contado con liquidacion).",
+      "tags": [
+        "atesoramiento",
+        "persona humana",
+        "formacion de activos externos",
+        "compra de dolares",
+        "ahorro",
+        "FAE",
+        "restriccion cruzada",
+        "MULC",
+        "MEP",
+        "CCL",
+        "90 dias"
+      ],
+      "texto": "Desde el 14 de abril de 2025 (Com. A 8226), las personas humanas residentes pueden formar activos externos (atesoramiento/ahorro) SIN limite de monto por transferencia o deposito (efectivo limitado a USD 100 mensuales). El cliente debe poseer ingresos y/o activos consistentes. IMPORTANTE - ACTUALIZACION: desde el 26/09/2025 (Com. A 8336) rige nuevamente una restriccion cruzada: quien accede al MULC para formar activos externos firma una declaracion jurada comprometiendose a NO comprar titulos valores con liquidacion en moneda extranjera (dolar MEP/CCL) por los 90 dias corridos subsiguientes. En la practica las entidades aplican esta restriccion de forma bidireccional: quien opero MEP/CCL debe esperar 90 dias para acceder al MULC (el sentido inverso surge de la operatoria de las entidades, no de la letra del punto 3.8.5).",
       "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
     },
     {
@@ -40,7 +58,16 @@
       "comunicacion_origen": "Resolucion General ARCA 5672",
       "estado": "vigente",
       "vigencia_desde": "2025-04-14",
-      "tags": ["percepcion", "30%", "impuesto", "atesoramiento", "ARCA", "AFIP", "servicios", "tarjeta"],
+      "tags": [
+        "percepcion",
+        "30%",
+        "impuesto",
+        "atesoramiento",
+        "ARCA",
+        "AFIP",
+        "servicios",
+        "tarjeta"
+      ],
       "texto": "Tras la reforma de abril 2025, las personas humanas y sucesiones indivisas pueden comprar moneda extranjera para atesoramiento o sin destino especifico SIN sufrir la percepcion impositiva del 30%. La percepcion del 30% se SIGUE aplicando para el pago de servicios al exterior y la adquisicion de bienes (por ejemplo consumos con tarjeta en el exterior y suscripciones). Conviene verificar el detalle de conceptos alcanzados en la RG de ARCA vigente.",
       "fuente_url": "https://www.argentina.gob.ar/arca"
     },
@@ -53,7 +80,14 @@
       "comunicacion_origen": "A 8226 y modif.",
       "estado": "vigente",
       "vigencia_desde": "2025-04-14",
-      "tags": ["ayuda familiar", "giro al exterior", "I07", "USD 200", "transferencia al exterior", "persona humana"],
+      "tags": [
+        "ayuda familiar",
+        "giro al exterior",
+        "I07",
+        "USD 200",
+        "transferencia al exterior",
+        "persona humana"
+      ],
       "texto": "Los giros al exterior por ayuda familiar (concepto I07) continuan con un limite de USD 200 mensuales por cliente en el conjunto de entidades. El cliente debe poseer ingresos y/o activos consistentes. Este limite es independiente del atesoramiento, que no tiene tope por transferencia bancaria.",
       "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
     },
@@ -66,7 +100,14 @@
       "comunicacion_origen": "A 6844 y modif.",
       "estado": "vigente",
       "vigencia_desde": "2019-12-05",
-      "tags": ["persona juridica", "empresa", "formacion de activos externos", "conformidad previa BCRA", "FCI", "fideicomiso"],
+      "tags": [
+        "persona juridica",
+        "empresa",
+        "formacion de activos externos",
+        "conformidad previa BCRA",
+        "FCI",
+        "fideicomiso"
+      ],
       "texto": "El acceso al mercado de cambios por parte de personas juridicas que no sean entidades autorizadas a operar en cambios, gobiernos locales, Fondos Comunes de Inversion, Fideicomisos y otras universalidades constituidas en el pais REQUIERE la conformidad previa del BCRA para la formacion de activos externos (atesoramiento) y para la operatoria con derivados. Es decir, a diferencia de las personas humanas, las personas juridicas NO tienen acceso libre al atesoramiento.",
       "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
     },
@@ -79,7 +120,14 @@
       "comunicacion_origen": "A 8331",
       "estado": "vigente",
       "vigencia_desde": "2025-09-18",
-      "tags": ["restriccion", "vinculacion societaria", "entidad financiera", "directivo", "A 8331", "persona humana"],
+      "tags": [
+        "restriccion",
+        "vinculacion societaria",
+        "entidad financiera",
+        "directivo",
+        "A 8331",
+        "persona humana"
+      ],
       "texto": "La Comunicacion A 8331 (septiembre 2025) incluye restricciones para la compra de moneda extranjera para formacion de activos externos por personas humanas residentes que tengan algun tipo de vinculacion societaria y/o laboral con una entidad financiera y/o cambiaria. Tambien habilita el acceso al mercado de cambios cuando la operacion implique la compra del 100% del capital accionario de una empresa no residente cuyo unico activo sea la participacion en la empresa local objeto de la operacion.",
       "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
     },
@@ -92,7 +140,14 @@
       "comunicacion_origen": "A 8330",
       "estado": "vigente",
       "vigencia_desde": "2025-09-18",
-      "tags": ["exportacion de servicios", "persona humana", "liquidacion de divisas", "freelance", "A 8330", "obligacion de ingreso"],
+      "tags": [
+        "exportacion de servicios",
+        "persona humana",
+        "liquidacion de divisas",
+        "freelance",
+        "A 8330",
+        "obligacion de ingreso"
+      ],
       "texto": "La Comunicacion A 8330 (septiembre 2025) deja sin efecto el tope maximo de USD 36.000 anuales que aplicaba a la excepcion de ingreso y liquidacion de divisas de personas humanas por exportaciones de servicios. A partir de esta norma toda persona humana puede conservar las divisas originadas en cobros de exportaciones de servicios -en cuenta local o del exterior- sin obligacion de ingresarlas y liquidarlas en el mercado de cambios, sin tope. Las entidades no pueden cobrar comisiones en estas operaciones concretadas por personas humanas.",
       "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
     },
@@ -105,7 +160,13 @@
       "comunicacion_origen": "A 6844 y modif.",
       "estado": "vigente",
       "vigencia_desde": "2019-12-05",
-      "tags": ["no residente", "repatriacion", "inversion de portafolio", "conformidad previa BCRA", "CNV"],
+      "tags": [
+        "no residente",
+        "repatriacion",
+        "inversion de portafolio",
+        "conformidad previa BCRA",
+        "CNV"
+      ],
       "texto": "Las personas no residentes requieren conformidad previa del BCRA para acceder al mercado de cambios, con excepciones para organismos internacionales, representaciones diplomaticas y consulares, beneficiarios de jubilaciones, entre otros. Estan exceptuados de la conformidad previa quienes repatrien capital y rentas por inversiones de portafolio en instrumentos con cotizacion en mercados locales autorizados por la CNV y FCI bajo ciertas condiciones.",
       "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
     },
@@ -113,13 +174,26 @@
       "id": "cnv-rg-1062",
       "organismo": "CNV",
       "cuerpo": "Resolucion General CNV",
-      "seccion": "Operatoria con titulos valores - dolar MEP y CCL",
+      "seccion": "Restricciones a la venta de valores con liquidacion en MX por apalancamiento",
       "punto": "RG 1062/2025",
-      "comunicacion_origen": "Resolucion General CNV 1062",
+      "comunicacion_origen": "Resolucion General CNV 1062/2025 (B.O. 15/04/2025)",
       "estado": "vigente",
-      "vigencia_desde": "2025-04-14",
-      "tags": ["CNV", "MEP", "contado con liquidacion", "CCL", "titulos valores", "parking", "restriccion cruzada"],
-      "texto": "En el marco de la reforma de abril 2025 (junto con la Com A 8226 del BCRA y el Decreto 269/2025), la CNV adecuo via Resolucion General 1062 la operatoria con titulos valores para personas humanas, permitiendo operar dolar MEP y contado con liquidacion de forma simultanea con la compra de billetes en el mercado de cambios. Las reglas de plazos de tenencia (parking) y restricciones cruzadas para quienes operan en el mercado de cambios deben verificarse en la RG vigente de CNV, ya que cambian con frecuencia.",
+      "vigencia_desde": "2025-04-15",
+      "tags": [
+        "CNV",
+        "cauciones tomadoras",
+        "pases",
+        "apalancamiento",
+        "MEP",
+        "CCL",
+        "financiamiento mercado de capitales",
+        "ON",
+        "oferta publica",
+        "BOPREAL",
+        "declaracion jurada",
+        "RG 1062"
+      ],
+      "texto": "La RG CNV 1062/2025 dispone que los Agentes de Liquidacion y Compensacion y los Agentes de Negociacion no pueden dar curso ni liquidar operaciones de venta de valores negociables con liquidacion en moneda extranjera (local o extranjera) de clientes -personas humanas o juridicas- que mantengan, en moneda local, posiciones tomadoras en cauciones y/o pases y/o cualquier tipo de financiamiento mediante operaciones del mercado de capitales. Es decir: tener caucion/pase tomador en pesos o financiamiento de mercado abierto inhabilita a operar dolar MEP/CCL de salida. Se instrumenta por declaracion jurada del cliente, que alcanza titularidad y cotitularidad y abarca cualquier agente inscripto. EXCEPCION: el financiamiento via emisiones de deuda con oferta publica autorizada por la CNV (por ejemplo ON) NO inhabilita; tampoco la venta de BOPREAL adquiridos en colocacion o licitacion primaria hasta el VN suscripto.",
       "fuente_url": "https://www.cnv.gov.ar/"
     },
     {
@@ -130,9 +204,67 @@
       "punto": "Com A 6401 / A 6594",
       "comunicacion_origen": "A 6401 y A 6594",
       "estado": "vigente",
-      "tags": ["relevamiento", "activos externos", "pasivos externos", "regimen informativo", "censo", "persona humana eximida"],
+      "tags": [
+        "relevamiento",
+        "activos externos",
+        "pasivos externos",
+        "regimen informativo",
+        "censo",
+        "persona humana eximida"
+      ],
       "texto": "El relevamiento de activos y pasivos externos (Com A 6401) alcanza a personas humanas y juridicas, patrimonios y universalidades no comprendidos en Gobierno General. Segun la Com A 6594 las personas humanas estan eximidas de declarar sus activos externos en este relevamiento. Las personas juridicas con activos o pasivos externos por encima de los umbrales si deben presentarlo.",
       "fuente_url": "https://www.bcra.gob.ar/"
+    },
+    {
+      "id": "bcra-ec-3.8.5-restriccion-cruzada",
+      "organismo": "BCRA",
+      "cuerpo": "Texto Ordenado Exterior y Cambios",
+      "seccion": "Seccion 3 - Egresos. Restriccion cruzada MULC / dolar financiero",
+      "punto": "3.8.5",
+      "comunicacion_origen": "A 8332 (18/09/2025) -> A 8336 (26/09/2025) -> A 8361 (dic 2025)",
+      "estado": "vigente",
+      "vigencia_desde": "2025-09-26",
+      "tags": [
+        "restriccion cruzada",
+        "cepo cruzado",
+        "MULC",
+        "MEP",
+        "CCL",
+        "90 dias",
+        "declaracion jurada",
+        "persona humana",
+        "titulos valores",
+        "liquidacion moneda extranjera",
+        "3.8.5"
+      ],
+      "texto": "Punto 3.8.5: en todos los casos del punto 3.8, la entidad debe contar con una declaracion jurada del cliente comprometiendose a no concertar -directa o indirectamente o por cuenta y orden de terceros- compras de titulos valores con liquidacion en moneda extranjera desde el momento en que requiere el acceso al MULC y por los 90 dias corridos subsiguientes. Introducido por A 8332 (solo sujetos vinculados a entidades financieras) y generalizado a TODAS las personas humanas por A 8336 el 26/09/2025. En la practica las entidades lo aplican de forma bidireccional (operar MEP/CCL frena el acceso al MULC por 90 dias). EXCEPCIONES incorporadas por A 8361: el compromiso no comprende (3.8.5.1) suscripciones primarias de titulos de deuda emitidos por residentes mantenidos como minimo 15 dias habiles; ni (3.8.5.2) la reinversion de cobros de capital y/o intereses de titulos del Tesoro Nacional o BCRA dentro de los 15 dias habiles siguientes al cobro.",
+      "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
+    },
+    {
+      "id": "bcra-ec-3.8.5-excepciones-a8361",
+      "organismo": "BCRA",
+      "cuerpo": "Texto Ordenado Exterior y Cambios",
+      "seccion": "Seccion 3 - Egresos. Excepciones a la restriccion cruzada",
+      "punto": "3.8.5.1 y 3.8.5.2",
+      "comunicacion_origen": "A 8361 (diciembre 2025)",
+      "estado": "vigente",
+      "vigencia_desde": "2025-12-10",
+      "tags": [
+        "excepcion",
+        "restriccion cruzada",
+        "suscripcion primaria",
+        "obligacion negociable",
+        "ON",
+        "reinversion cupones",
+        "Tesoro",
+        "BCRA",
+        "15 dias habiles",
+        "capital markets",
+        "3.8.5.1",
+        "3.8.5.2"
+      ],
+      "texto": "La Com. A 8361 (dic 2025) reemplazo el punto 3.8.5 incorporando dos excepciones a la restriccion cruzada de 90 dias. El compromiso de no comprar titulos con liquidacion en MX NO alcanza a: (3.8.5.1) compras en el marco de suscripciones primarias de titulos de deuda emitidos por residentes, en la medida que el comprador los mantenga en cartera como minimo 15 dias habiles; y (3.8.5.2) la reinversion de los cobros en moneda extranjera de servicios de capital y/o intereses de titulos emitidos por el Tesoro Nacional o el BCRA, dentro de los 15 dias habiles siguientes al cobro. Estas excepciones son especialmente relevantes para operaciones de mercado primario y reinversion de cupones.",
+      "fuente_url": "https://www.bcra.gob.ar/Pdfs/Texord/t-excbio.pdf"
     }
   ]
 }
