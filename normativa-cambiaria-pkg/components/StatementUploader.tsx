@@ -71,7 +71,8 @@ export function StatementUploader({ onResultado }: Props) {
   function confirmarYEnviar() {
     if (!resultado) return;
     const recientes = resultado.candidatosMepCcl.filter((c) => c.dentroDe90Dias);
-    const cauciones = resultado.caucionesTomadoras;
+    const caucionesArs = resultado.caucionesTomadoras.filter((c) => c.moneda === "ARS");
+    const caucionesUsd = resultado.caucionesTomadoras.filter((c) => c.moneda === "USD");
     let resumen = "Analicé mi statement. ";
     if (recientes.length > 0) {
       resumen += `Detecté ${recientes.length} operación(es) que parecen MEP/CCL en los últimos 90 días: ` +
@@ -79,10 +80,16 @@ export function StatementUploader({ onResultado }: Props) {
     } else {
       resumen += "No detecté operaciones de MEP/CCL en los últimos 90 días. ";
     }
-    if (cauciones.length > 0) {
-      resumen += `Además detecté ${cauciones.length} registro(s) de cauciones tomadoras. `;
+    if (caucionesArs.length > 0) {
+      resumen += `Detecté ${caucionesArs.length} caución/pase tomador EN PESOS (moneda local). `;
     }
-    resumen += "(Estos datos los detectó el análisis del statement; confirmo que son correctos.)";
+    if (caucionesUsd.length > 0) {
+      resumen += `Detecté ${caucionesUsd.length} caución/pase tomador EN DÓLARES (USD) — aclaro que estas son en moneda extranjera. `;
+    }
+    if (resultado.caucionesTomadoras.length === 0) {
+      resumen += "No detecté cauciones tomadoras. ";
+    }
+    resumen += "(Estos datos los detectó el análisis del statement; confirmo que son correctos. Recordá que la RG CNV 1062 solo inhabilita por cauciones tomadoras EN PESOS, no en dólares.)";
     onResultado(resumen);
   }
 
@@ -179,7 +186,11 @@ export function StatementUploader({ onResultado }: Props) {
               {resultado.caucionesTomadoras.length > 0 && (
                 <div style={{ fontSize: 14, marginBottom: 8 }}>
                   <strong>Cauciones tomadoras detectadas:</strong>{" "}
-                  {resultado.caucionesTomadoras.length} registro(s).
+                  {resultado.caucionesTomadoras.filter((c) => c.moneda === "ARS").length} en pesos,{" "}
+                  {resultado.caucionesTomadoras.filter((c) => c.moneda === "USD").length} en dólares.
+                  <div style={{ fontSize: 12.5, color: "var(--muted)", marginTop: 2 }}>
+                    Solo las cauciones EN PESOS inhabilitan (RG CNV 1062); las de dólares no.
+                  </div>
                 </div>
               )}
 
