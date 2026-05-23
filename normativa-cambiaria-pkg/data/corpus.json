@@ -183,6 +183,8 @@
         "CNV",
         "cauciones tomadoras",
         "pases",
+        "moneda local",
+        "pesos",
         "apalancamiento",
         "MEP",
         "CCL",
@@ -190,10 +192,10 @@
         "ON",
         "oferta publica",
         "BOPREAL",
-        "declaracion jurada",
-        "RG 1062"
+        "RG 1062",
+        "RG 1018"
       ],
-      "texto": "La RG CNV 1062/2025 dispone que los Agentes de Liquidacion y Compensacion y los Agentes de Negociacion no pueden dar curso ni liquidar operaciones de venta de valores negociables con liquidacion en moneda extranjera (local o extranjera) de clientes -personas humanas o juridicas- que mantengan, en moneda local, posiciones tomadoras en cauciones y/o pases y/o cualquier tipo de financiamiento mediante operaciones del mercado de capitales. Es decir: tener caucion/pase tomador en pesos o financiamiento de mercado abierto inhabilita a operar dolar MEP/CCL de salida. Se instrumenta por declaracion jurada del cliente, que alcanza titularidad y cotitularidad y abarca cualquier agente inscripto. EXCEPCION: el financiamiento via emisiones de deuda con oferta publica autorizada por la CNV (por ejemplo ON) NO inhabilita; tampoco la venta de BOPREAL adquiridos en colocacion o licitacion primaria hasta el VN suscripto.",
+      "texto": "La RG CNV 1062/2025 dispone que los Agentes de Liquidacion y Compensacion y los Agentes de Negociacion no pueden dar curso ni liquidar operaciones de venta de valores negociables con liquidacion en moneda extranjera de clientes que mantengan, EN MONEDA LOCAL (pesos), posiciones tomadoras en cauciones y/o pases y/o cualquier tipo de financiamiento en pesos del mercado de capitales. IMPORTANTE: la restriccion aplica solo a posiciones tomadoras EN PESOS. Desde la RG 1018/2024, las cauciones/pases tomadores en MONEDA EXTRANJERA (USD) NO inhabilitan: se puede vender valores con liquidacion en MX aun teniendo cauciones tomadoras en dolares. Se instrumenta por declaracion jurada (alcanza titularidad y cotitularidad, en cualquier agente). EXCEPCION: el financiamiento via emisiones de deuda con oferta publica autorizada por CNV (ej. ON) NO inhabilita; tampoco la venta de BOPREAL adquiridos en colocacion o licitacion primaria hasta el VN suscripto.",
       "fuente_url": "https://www.cnv.gov.ar/"
     },
     {
