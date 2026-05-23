@@ -27,7 +27,10 @@ export function ConsultaGuiada() {
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState("");
   const [progreso, setProgreso] = useState("");
-  const [opciones, setOpciones] = useState<string[]>([]);
+  const [opciones, setOpciones] = useState<string[]>([
+    "Persona humana",
+    "Persona jurídica",
+  ]);
   const [concluido, setConcluido] = useState(false);
   const finRef = useRef<HTMLDivElement>(null);
 
@@ -73,7 +76,7 @@ export function ConsultaGuiada() {
     setInput("");
     setError("");
     setProgreso("");
-    setOpciones([]);
+    setOpciones(["Persona humana", "Persona jurídica"]);
     setConcluido(false);
   }
 
