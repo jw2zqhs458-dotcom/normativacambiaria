@@ -22,6 +22,12 @@ export const FLUJO_PERSONA_HUMANA = {
     "¿Qué querés hacer: comprar USD para atesoramiento, girar a una cuenta propia en el exterior, o enviar ayuda familiar?",
     "¿Pensás comprar por transferencia/depósito o en efectivo (billetes)?",
   ],
+  // Hechos vigentes que el motor PUEDE afirmar (con cita). Fuera de esto, no improvisar.
+  hechos_vigentes: [
+    "PARKING: para personas humanas residentes el parking (plazo mínimo de tenencia) es CERO desde la RG CNV 1062/2025. Se puede comprar un bono y venderlo en su especie en dólares (ej. AL30/AL30D) el mismo día, sin esperar. NO afirmar que hay parking de 1 día para personas humanas. El plazo de 1 día hábil puede seguir aplicando solo a personas jurídicas.",
+    "El dólar MEP/CCL se opera en el mercado de capitales (vía ALyC), con la cuenta comitente, y NO requiere acceso al MULC.",
+    "Los dólares obtenidos por MEP, una vez acreditados, son de libre disponibilidad; transferirlos a una cuenta propia en el exterior no requiere acceso al MULC.",
+  ],
   inhabilitantes: [
     {
       id: "INH-01",
