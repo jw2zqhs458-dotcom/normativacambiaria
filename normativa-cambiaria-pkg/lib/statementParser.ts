@@ -7,7 +7,8 @@
  * Todo corre en el NAVEGADOR: el statement nunca se sube a ningún servidor.
  */
 
-// Bonos típicos para dólar bolsa (soberanos en USD).
+// Bonos soberanos USD típicos de dólar bolsa: se usan como hint de mayor
+// confianza, pero la detección NO se limita a ellos (también CEDEARs, etc.).
 const BONOS_DOLAR_BOLSA = new Set([
   "AL30", "GD30", "AL29", "GD29", "AL35", "GD35", "AL41", "GD38",
   "GD41", "AE38", "BPOA", "BPOB", "BPOC", "BPOD",
@@ -134,9 +135,12 @@ function diasDesde(fechaIso: string): number {
 
 function detectarMepCcl(ops: Operacion[]): CandidatoMepCcl[] {
   const candidatos: CandidatoMepCcl[] = [];
-  const bonos = ops.filter((o) => BONOS_DOLAR_BOLSA.has(o.especie) && o.fecha);
+  // Antes: solo bonos de una lista fija. Ahora: cualquier especie operada,
+  // porque MEP/CCL también se hace con CEDEARs y otros títulos. La huella es
+  // el par compra/venta de la MISMA especie con monedas de liquidación distintas.
+  const conFecha = ops.filter((o) => o.fecha);
   const porFecha = new Map<string, Operacion[]>();
-  for (const o of bonos) {
+  for (const o of conFecha) {
     const key = `${o.especie}|${o.fecha}`;
     if (!porFecha.has(key)) porFecha.set(key, []);
     porFecha.get(key)!.push(o);
@@ -148,11 +152,14 @@ function detectarMepCcl(ops: Operacion[]): CandidatoMepCcl[] {
     const noArs = new Set([...monedas].filter((m) => m !== "ARS"));
     if (tipos.has("COMPRA") && tipos.has("VENTA") && noArs.size >= 1 && monedas.size >= 2) {
       const tipoDolar = monedas.has("CCL") ? "CCL" : "MEP";
+      const esBonoConocido = BONOS_DOLAR_BOLSA.has(especie);
       candidatos.push({
         fecha,
         especie,
         tipoOperacion: tipoDolar,
-        detalle: `Par compra/venta de ${especie} con liquidación en ${[...monedas].join(", ")}`,
+        detalle: esBonoConocido
+          ? `Par compra/venta de ${especie} con liquidación en ${[...monedas].join(", ")}`
+          : `Par compra/venta de ${especie} (no es bono soberano típico — revisá si fue MEP/CCL) con liquidación en ${[...monedas].join(", ")}`,
         dentroDe90Dias: diasDesde(fecha) <= 90,
       });
     }
