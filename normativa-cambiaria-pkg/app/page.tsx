@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Markdown } from "@/components/Markdown";
 
 interface Fuente {
   id: string;
@@ -309,14 +310,8 @@ export default function Home() {
             >
               Respuesta
             </div>
-            <div
-              style={{
-                whiteSpace: "pre-wrap",
-                fontSize: 17.5,
-                lineHeight: 1.7,
-              }}
-            >
-              {respuesta}
+            <div style={{ fontSize: 17.5, lineHeight: 1.7 }}>
+              <Markdown texto={respuesta} />
             </div>
           </article>
 
