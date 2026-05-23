@@ -172,11 +172,6 @@ export function ConsultaGuiada() {
         </div>
       )}
 
-      {/* Uploader de statement (opcional, client-side) */}
-      {!concluido && !cargando && (
-        <StatementUploader onResultado={(resumen) => enviar(resumen)} />
-      )}
-
       {/* Botones de opciones (cuando el motor las ofrece) */}
       {!concluido && !cargando && opciones.length > 0 && (
         <div
@@ -285,6 +280,19 @@ export function ConsultaGuiada() {
           >
             Enviar
           </button>
+        </div>
+      )}
+
+      {/* Opción de statement, al pie y separada del hilo (discreta) */}
+      {!concluido && (
+        <div
+          style={{
+            marginTop: 28,
+            paddingTop: 20,
+            borderTop: "1px solid var(--line)",
+          }}
+        >
+          <StatementUploader onResultado={(resumen) => enviar(resumen)} />
         </div>
       )}
     </div>
