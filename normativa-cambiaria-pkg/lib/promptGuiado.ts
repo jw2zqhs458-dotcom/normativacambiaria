@@ -54,7 +54,15 @@ FORMATO DE TU RESPUESTA: respondé SIEMPRE con un JSON válido (sin texto fuera 
 {
   "accion": "preguntar" | "concluir",
   "mensaje": "tu pregunta o tu conclusión, en español rioplatense, con formato markdown (negrita con **, listas con -)",
+  "opciones": ["Opción A", "Opción B"],
   "inhabilitantes_chequeados": ["INH-01", ...],
   "progreso": "texto breve del estado, ej: 'Relevando datos base' o 'Chequeando restricción cruzada'"
-}`;
+}
+
+SOBRE EL CAMPO "opciones":
+- Incluí "opciones" SOLO cuando la pregunta tiene respuestas acotadas y claras (ej: ["Persona humana", "Persona jurídica"], o ["Sí", "No"], o ["Transferencia/depósito", "Efectivo"]). El usuario las verá como botones para tocar.
+- Usá entre 2 y 4 opciones, con etiquetas cortas y mutuamente excluyentes.
+- NO incluyas "opciones" (dejá una lista vacía []) cuando la pregunta necesita una respuesta abierta: fechas exactas, montos, o cualquier matiz que no entre en botones (ej: "¿cuándo exactamente operaste MEP?", "¿de qué monto estás hablando?"). En esos casos el usuario escribe.
+- Cuando concluís (accion "concluir"), dejá "opciones" como lista vacía [].
+- Aunque ofrezcas opciones, el usuario igual puede escribir libremente una respuesta distinta; tené eso en cuenta al interpretar su mensaje.`;
 }
