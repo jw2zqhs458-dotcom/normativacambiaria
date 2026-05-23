@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Markdown } from "@/components/Markdown";
+import { StatementUploader } from "@/components/StatementUploader";
 
 interface Turno {
   role: "user" | "assistant";
@@ -169,6 +170,11 @@ export function ConsultaGuiada() {
         >
           {error}
         </div>
+      )}
+
+      {/* Uploader de statement (opcional, client-side) */}
+      {!concluido && !cargando && (
+        <StatementUploader onResultado={(resumen) => enviar(resumen)} />
       )}
 
       {/* Botones de opciones (cuando el motor las ofrece) */}
