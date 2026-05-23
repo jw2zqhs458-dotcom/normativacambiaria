@@ -35,13 +35,13 @@ export const FLUJO_PERSONA_HUMANA = {
     },
     {
       id: "INH-05",
-      nombre: "Posiciones tomadoras en cauciones/pases o financiamiento de mercado",
-      norma: "CNV, Resolución General 1062/2025",
+      nombre: "Posiciones tomadoras en cauciones/pases o financiamiento de mercado EN PESOS",
+      norma: "CNV, Resolución General 1062/2025 (modif. de RG 1018/2024)",
       pregunta:
-        "¿Tenés hoy posiciones tomadoras en cauciones o pases en pesos, o algún financiamiento tomado en el mercado de capitales (en cualquier agente, como titular o cotitular)?",
+        "¿Tenés hoy posiciones tomadoras en cauciones o pases EN PESOS (moneda local), o algún financiamiento tomado en pesos en el mercado de capitales (en cualquier agente, como titular o cotitular)?",
       critico: true,
       detalle:
-        "Si mantenés caución/pase tomador en pesos o financiamiento de mercado, no podés vender valores con liquidación en MX (MEP/CCL de salida). Alcanza titularidad y cotitularidad, en cualquier agente. EXCEPCIÓN clave: el financiamiento vía emisiones de deuda con oferta pública autorizada por CNV (ej. ON) NO inhabilita.",
+        "CRÍTICO - LEER CON CUIDADO: la restricción aplica SOLO a posiciones tomadoras en cauciones/pases en MONEDA LOCAL (pesos) o financiamiento en pesos. Las cauciones/pases tomadores en MONEDA EXTRANJERA (USD) NO inhabilitan: desde la RG 1018/2024 se puede vender valores con liquidación en MX aún teniendo cauciones tomadoras en dólares. Si la persona tiene cauciones tomadoras SOLO en USD, este inhabilitante NO aplica. EXCEPCIÓN adicional: el financiamiento vía emisiones de deuda con oferta pública autorizada por CNV (ej. ON) NO inhabilita.",
     },
     {
       id: "INH-04",
